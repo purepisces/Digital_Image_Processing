@@ -352,7 +352,7 @@ ___
 
 There are two main approaches to intensity-level slicing, as demonstrated in **Figure 3.11 (a)** and **Figure 3.11 (b)**:
 
-<img src="Intensity-Level-Slicing.png" alt="Intensity-Level-Slicing" width="400" height="300"/>
+<img src="Intensity-Level-Slicing.png" alt="Intensity-Level-Slicing" width="500" height="300"/>
 
 
 1.  **Binary Slicing (Figure 3.11(a))**:
@@ -392,7 +392,7 @@ ___
 
 **Bit-plane slicing** is a technique where each pixel of an image is represented as a sequence of bits (typically 8 bits for an 8-bit grayscale image), and the image is decomposed into a series of **binary images**. Each binary image corresponds to one of the bit-planes, ranging from the least significant bit (plane 1) to the most significant bit (plane 8).
 
-<img src="Bit-Planes.png" alt="Bit-Planes" width="400" height="300"/>
+<img src="Bit-Planes.png" alt="Bit-Planes" width="500" height="300"/>
 
 
 ### What Each Bit Plane Represents:
