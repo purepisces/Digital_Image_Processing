@@ -172,3 +172,29 @@ This decomposition is especially useful in convolution operations:
 - Instead of performing a full 2D convolution using the entire kernel matrix, we can first convolve the image with the column vector **v**, and then with the row vector **w^T**.
 - This reduces the complexity of the convolution operation and speeds up processing, especially with large kernels or images.
 ___
+
+**Circular symmetry** refers to a property of a matrix, kernel, or any function where its values are symmetric about its center in all directions. In simpler terms, if you rotate the matrix or kernel around its center, the values remain unchanged. This type of symmetry is often encountered in image processing and filtering, where the structure or pattern of the kernel looks the same regardless of how you rotate it around the central element.
+
+### Example of Circularly Symmetric Kernel:
+
+Consider the following 3×3 kernel:
+
+K=[121242121]K = \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}K=​121​242​121​​
+
+This kernel is **circularly symmetric** because:
+
+-   If you rotate it 90°, 180°, or 270° around the central element (the value 4), the matrix will look exactly the same.
+-   Each concentric "circle" around the center (i.e., the rows and columns at increasing distances from the center) are symmetric.
+
+### Why is this important?
+
+-   **Circularly symmetric kernels** are useful in image processing because they treat all directions around a pixel equally. This can be important when designing filters that shouldn't favor any particular direction, such as blurring filters or Gaussian filters.
+-   Circularly symmetric kernels allow for more efficient computation, particularly with separable kernels, which can be broken down into 1-D operations.
+
+### Gaussian Kernels:
+
+A common example of a circularly symmetric kernel is the **Gaussian kernel**, which is used in Gaussian blur operations. The values of the kernel are highest at the center and decrease symmetrically as you move away from the center. A 2D Gaussian kernel might look something like this:
+
+G=116[121242121]G = \frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}G=161​​121​242​121​​
+
+This Gaussian kernel is circularly symmetric because rotating it around its center doesn’t change its structure.
