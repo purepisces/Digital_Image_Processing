@@ -1,4 +1,4 @@
-
+## eXPLAIN FORLULA 3-39 AND 3-40
 ### Example: Three 3×3 Kernels
 
 Let’s assume we have three kernels \(w_1\), \(w_2\), and \(w_3\), all of size \(3 \times 3\). These kernels are used for convolution sequentially on an image or another matrix.
