@@ -198,3 +198,116 @@ A common example of a circularly symmetric kernel is the **Gaussian kernel**, wh
 G=116[121242121]G = \frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}G=161​​121​242​121​​
 
 This Gaussian kernel is circularly symmetric because rotating it around its center doesn’t change its structure.
+
+___
+
+### Spatial Domain vs. Frequency Domain
+
+#### 1. **Spatial Domain:**
+
+-   **Definition**: In image processing, the **spatial domain** refers to the 2D matrix (grid) of pixel values that represent the intensity or color information of an image.
+-   **Representation**: When you think of an image as a 2D array of pixel values, you are working in the **spatial domain**. Each pixel represents a point in space (x, y), and the value of each pixel represents some property (e.g., intensity, color) at that point.
+-   **Operations in Spatial Domain**:
+    -   **Filtering**: Spatial domain filtering involves directly manipulating the pixel values in the matrix (e.g., convolution with a kernel). The kernel slides over the image, applying operations like blurring, sharpening, or edge detection.
+    -   **Example**: Suppose you have an image that is a 5x5 matrix of pixel values. You can apply a 3x3 convolution kernel (like a blur filter) to modify the pixel values by directly operating on the image in the spatial domain.
+
+**Example of a 3x3 image (spatial domain)**:
+
+lua
+
+Copy code
+
+`Image = [[120, 125, 130],
+         [122, 128, 131],
+         [119, 123, 127]]` 
+
+Here, each number represents the intensity of a pixel at a specific location in the 2D grid.
+
+#### 2. **Frequency Domain:**
+
+-   **Definition**: The **frequency domain** represents an image in terms of the frequencies of pixel intensity changes, rather than directly as pixel values. When an image is transformed from the spatial domain to the frequency domain, its representation shows how often the pixel values change across the image.
+-   **Fourier Transform**: The conversion from the spatial domain to the frequency domain is done using a **Fourier transform**. The resulting frequency representation shows how much of each frequency component (low or high) is present in the image.
+    -   **Low frequencies** correspond to slow changes in intensity (smooth areas of the image).
+    -   **High frequencies** correspond to rapid changes in intensity (edges and details).
+-   **Operations in Frequency Domain**:
+    -   In the frequency domain, image filtering can be performed by multiplying the Fourier-transformed image by a **filter function**. This is easier in some cases because filtering in the frequency domain is simpler mathematically (multiplication vs. convolution).
+    -   **Example**: A **low-pass filter** applied in the frequency domain might reduce high frequencies (sharp changes), resulting in a blurred image when transformed back to the spatial domain.
+
+**Example of a frequency-domain function**: A low-pass filter in the frequency domain could look like this:
+
+lua
+
+Copy code
+
+`Frequency Domain = [[1, 0, 0],
+                    [1, 1, 0],
+                    [1, 1, 1]]` 
+
+This function allows low frequencies (smooth regions) to pass while blocking higher frequencies (edges or noise).
+
+----------
+
+### Key Points:
+
+1.  **Convolution in the Spatial Domain ≡ Multiplication in the Frequency Domain**:
+    
+    -   When you apply **convolution** to an image in the spatial domain, it is mathematically equivalent to multiplying the image by a filter in the frequency domain. This equivalence is useful because some operations are easier or faster to perform in the frequency domain (such as filtering).
+        
+    -   **Example**: Blurring an image in the spatial domain using a convolution with a Gaussian kernel is equivalent to applying a low-pass filter in the frequency domain by multiplying the Fourier-transformed image with the frequency domain version of the filter.
+        
+2.  **Impulse in the Spatial Domain ≡ Constant in the Frequency Domain**:
+    
+    -   An **impulse** (a single high-value pixel in a sea of zeroes) in the spatial domain corresponds to a **constant** value in the frequency domain.
+    -   Conversely, a constant in the spatial domain (e.g., all pixel values are the same) appears as an impulse in the frequency domain (all the energy is concentrated in the low-frequency component).
+
+----------
+
+### Example to Connect Both Domains:
+
+#### Spatial Domain Example:
+
+Consider a **1D signal** that represents the pixel intensities along a row of an image:
+
+csharp
+
+Copy code
+
+`[10, 12, 14, 16, 18]` 
+
+This is a smooth transition with no sharp changes, so most of the energy is concentrated in the **low-frequency** components.
+
+#### Frequency Domain:
+
+When you take the **Fourier transform** of this signal, you may get something like this:
+
+csharp
+
+Copy code
+
+`[70, 0, 0, 0, 0]` 
+
+Here, the large value at the first frequency represents the dominant low-frequency component, meaning the image has a smooth gradient of intensities.
+
+#### Edge Detection (High Frequencies):
+
+If the original signal has a sharp change (e.g., edges in an image):
+
+csharp
+
+Copy code
+
+`[10, 100, 200, 255, 0]` 
+
+The Fourier transform will have more energy in the **high-frequency** components because the signal changes rapidly.
+
+----------
+
+### Conclusion:
+
+-   The **spatial domain** refers to the original pixel-based representation of an image.
+-   The **frequency domain** refers to how often pixel values change across the image, showing the image’s frequency components.
+-   Convolution in the spatial domain becomes multiplication in the frequency domain, and impulses (single high values) in one domain correspond to constants in the other.
+
+In summary, the **spatial domain** is where you work directly with pixel values (e.g., an image matrix), and the **frequency domain** represents the underlying frequencies that make up those pixel changes (obtained via Fourier transforms).
+
+
