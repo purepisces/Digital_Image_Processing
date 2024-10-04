@@ -1,4 +1,4 @@
-## eXPLAIN FORLULA 3-39 AND 3-40
+## EXPLAIN FORLULA 3-39 AND 3-40
 ### Example: Three 3×3 Kernels
 
 Let’s assume we have three kernels \(w_1\), \(w_2\), and \(w_3\), all of size \(3 \times 3\). These kernels are used for convolution sequentially on an image or another matrix.
@@ -111,3 +111,64 @@ So, the **effective kernel size** after applying all three convolutions will be 
 -   This is why, after multiple stages of convolution, the final "effective" kernel size becomes \(W_v = Q \times (m - 1) + m\) and \(W_h = Q \times (n - 1) + n\), where \(Q\) is the number of convolution stages, and \(m\) and \(n\) are the dimensions of the kernels used.
 
 In this example, after three convolutions with \(3 \times 3\) kernels, the final effective kernel is \(9 \times 9\).
+
+___
+### Example:
+Let’s consider a small rank-1 kernel matrix **K** and work through the steps.
+
+#### Kernel Matrix:
+\[
+K = \begin{bmatrix}
+2 & 4 & 6 \\
+4 & 8 & 12 \\
+6 & 12 & 18
+\end{bmatrix}
+\]
+
+#### Step 1: Find a non-zero element **E**:
+Let’s pick \( E = 2 \), which is the element at position \( (1,1) \).
+
+#### Step 2: Form vectors **c** and **r**:
+The column **c** corresponding to **E** is:
+\[
+c = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}
+\]
+
+The row **r** corresponding to **E** is:
+\[
+r = \begin{bmatrix} 2 & 4 & 6 \end{bmatrix}
+\]
+
+#### Step 3: Find vectors **v** and **w^T**:
+\[
+v = c = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}
+\]
+\[
+w^T = \frac{r}{E} = \frac{1}{2} \times \begin{bmatrix} 2 & 4 & 6 \end{bmatrix} = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}
+\]
+
+#### Step 4: Reconstruct the kernel from the outer product of **v** and **w^T**:
+\[
+K = v \times w^T = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} \times \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}
+\]
+\[
+K = \begin{bmatrix}
+2 \times 1 & 2 \times 2 & 2 \times 3 \\
+4 \times 1 & 4 \times 2 & 4 \times 3 \\
+6 \times 1 & 6 \times 2 & 6 \times 3
+\end{bmatrix}
+= \begin{bmatrix}
+2 & 4 & 6 \\
+4 & 8 & 12 \\
+6 & 12 & 18
+\end{bmatrix}
+\]
+
+Thus, we successfully decomposed the kernel into vectors **v** and **w^T**, whose outer product gives the original kernel matrix.
+
+### Separable Kernels in Convolution:
+This decomposition is especially useful in convolution operations:
+
+- Instead of performing a full 2D convolution using the entire kernel matrix, we can first convolve the image with the column vector **v**, and then with the row vector **w^T**.
+- This reduces the complexity of the convolution operation and speeds up processing, especially with large kernels or images.
+___
