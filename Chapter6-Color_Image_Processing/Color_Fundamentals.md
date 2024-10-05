@@ -41,7 +41,29 @@ In contrast, laser systems or more advanced display technologies that use more t
 
 Conclusion:
 The term "primary colors" is often misinterpreted to mean that red, green, and blue light can produce every color. This is not true unless you also allow the wavelength of the light to vary, which would require more than just three fixed primary colors. The RGB system is powerful but limited—it can produce many colors but not the entire spectrum that the human eye can perceive.
+___
 
+
+1. Defining Specific Primary Color Wavelengths:
+The primary colors (red, green, and blue for light, or cyan, magenta, and yellow for pigments) are defined in terms of specific wavelengths or colors for the purpose of standardization. This helps create consistent systems for color reproduction in various industries, such as printing, screen displays, and lighting.
+For example, the CIE (International Commission on Illumination) defined specific wavelengths for red, green, and blue in 1931 to establish a standard for color reproduction.
+However, in practice, these specific wavelengths don’t always perfectly correspond to real-world situations—especially when it comes to working with pigments (such as in painting, printing, or other physical media).
+
+2. Pigments Are Not Pure:
+Pigments (like those used in paints, inks, or dyes) rarely consist of a single, pure wavelength of light. Real-world pigments absorb and reflect a range of wavelengths rather than just a single, narrow one.
+This means that when you mix pigments, they don’t behave as ideally as the mathematical models would suggest. Instead of producing clear, vibrant colors, you often get “muddy” colors, especially when mixing primary or secondary colors.
+3. Muddy Brown Instead of Black:
+In theory, when you mix all three primary colors (in the subtractive color model, used for pigments—cyan, magenta, and yellow), you are supposed to get black. However, because pigments are not perfect and absorb a range of wavelengths, mixing them together often results in a muddy brown color rather than a pure black.
+
+This happens because instead of all the wavelengths being fully absorbed (which would produce black), some wavelengths are reflected by the imperfections in the pigments, leading to the muddy or dull appearance.
+
+This contrasts with additive color mixing (used for light), where combining red, green, and blue light in the right proportions produces white light. In the case of pigments (subtractive mixing), combining cyan, magenta, and yellow should produce black, but in practice often doesn't due to the impurities of real-world pigments.
+
+4. Real-World Limitations of Mixing Colors:
+The theory of primary colors (whether for light or pigments) assumes ideal conditions where colors are pure and mix perfectly. But in real-world applications, this is rarely the case. Pigments reflect a broad spectrum of light, and the more you mix them, the more light gets absorbed and reflected inconsistently, which is why you often end up with dull or muddy colors instead of clear, vibrant ones.
+When primary and secondary pigments are mixed, instead of producing clean new colors or pure black, the result is often an undesirable brownish or grayish tone.
+Conclusion:
+The statement emphasizes that although standard primary colors are defined in theory for color systems, in practice, pigments do not behave perfectly. This results in muddy or brownish colors when mixing pigments (like paints) instead of achieving the expected vibrant colors or deep black. This limitation arises from the fact that real-world pigments are not pure and do not absorb and reflect light in idealized ways.
 
 
 
