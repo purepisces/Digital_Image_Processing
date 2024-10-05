@@ -2,3 +2,13 @@ Visible light, as shown in Figure 6.2, is a small portion of the electromagnetic
 
 If an object reflects all wavelengths of visible light equally, it appears white.
 If an object reflects only certain wavelengths, it appears colored. For instance, an object that reflects light primarily in the wavelength range between 500 and 570 nm appears green, as this is the range for green light. The rest of the light (other wavelengths) is absorbed by the object.
+
+
+
+
+Achromatic Light: This refers to light that doesn't have any color, such as shades of gray (ranging from black to white). The only characteristic of achromatic light is its intensity, which measures how bright or dark the light is.
+Chromatic Light: This is light that has color, and it spans the range of visible light. The qualities of chromatic light are measured in terms of:
+Radiance: The total amount of energy emitted by a light source (measured in watts).
+Luminance: The amount of energy from the light source that can be perceived by an observer (measured in lumens).
+Brightness: This is a subjective measure, based on how bright the light appears to an observer. It is influenced by the intensity of the light and is difficult to measure objectively.
+In summary, color is a physical phenomenon caused by the interaction of light with objects, which reflect certain wavelengths and absorb others. Our perception of color depends on the wavelengths of light that an object reflects, while the physical nature of light can be described in terms of its intensity, energy, and the wavelengths that make up visible light.
