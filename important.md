@@ -1,0 +1,1 @@
+Color characteristics are typically defined by brightness, hue, and saturation. Brightness refers to intensity, hue to the dominant wavelength (like red, orange, or yellow), and saturation to the purity of the color. Pure colors are fully saturated, while adding white light reduces saturation, as seen in shades like pink or lavender.
