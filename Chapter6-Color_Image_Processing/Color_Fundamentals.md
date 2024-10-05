@@ -1,3 +1,7 @@
+___
+Primary colors of light (RGB) follow the additive color model: mixing primary light colors results in brighter colors and, ultimately, white.
+Primary colors of pigments (CMY) follow the subtractive color model: mixing primary pigment colors results in darker colors and, ultimately, black. This happens because pigments absorb light, whereas lights emit it.
+___
 Visible light, as shown in Figure 6.2, is a small portion of the electromagnetic spectrum and includes light with wavelengths between 400 and 700 nanometers. When light hits an object, the wavelengths that are reflected by the object determine its color:
 
 If an object reflects all wavelengths of visible light equally, it appears white.
