@@ -69,6 +69,36 @@ When primary and secondary pigments are mixed, instead of producing clean new co
 Conclusion:
 The statement emphasizes that although standard primary colors are defined in theory for color systems, in practice, pigments do not behave perfectly. This results in muddy or brownish colors when mixing pigments (like paints) instead of achieving the expected vibrant colors or deep black. This limitation arises from the fact that real-world pigments are not pure and do not absorb and reflect light in idealized ways.
 
+___
+
+In the **additive color model** (for light), **red** is a **primary color**, which means that when we are talking about red **light**, it **emits** or **produces** red light at a specific wavelength (around 700 nm), rather than absorbing other colors. The concept of **absorption** applies more to pigments or materials, not to emitted light.
+
+Let’s break this down:
+
+### **1. Primary Colors of Light (Additive Model):**
+
+-   In the additive model, colors are created by **emitting light**. When you refer to **red light**, you’re talking about **light at the red wavelength** (around 700 nm).
+-   Red light in the additive model **does not absorb** any other colors because it is not a pigment or material; it **emits** only red light. In other words, the light itself is not absorbing or subtracting anything—it is producing red light directly.
+
+### **2. Pigments (Subtractive Model):**
+
+When it comes to **pigments** like magenta or red paint, the situation is different. **Pigments** work by **absorbing some wavelengths** of light and **reflecting others**, which is why they follow the **subtractive color model**.
+
+-   **Magenta pigment**: As you correctly stated, **magenta** pigment absorbs **green light** and reflects both **red and blue** light, which is why magenta looks like a mix of red and blue to our eyes.
+    
+-   **Red pigment**: In the subtractive model (pigments), **red pigment** absorbs **blue** and **green** light and reflects **red** light. This is why we perceive a red object as red—the pigment is absorbing all the other colors and only reflecting the red wavelength.
+    
+
+### Summary of Key Points:
+
+-   **Red Light (Additive Model)**: In the additive color model (for light), red light **emits** red wavelengths of light (around 700 nm) and **does not absorb** any other colors. It is simply red light.
+    
+-   **Red Pigment (Subtractive Model)**: In the subtractive color model (for pigments), **red pigment** absorbs blue and green wavelengths and **reflects red light**. This is why the red pigment appears red to our eyes.
+    
+
+### Conclusion:
+
+In the context of **light** (additive model), **red** is simply **emitted** light at the red wavelength and doesn’t absorb anything. However, in the context of **pigments** (subtractive model), **red pigment** absorbs blue and green light and reflects red light, which is why objects colored with red pigment appear red.
 
 
 
